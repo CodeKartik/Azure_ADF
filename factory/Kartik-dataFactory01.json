@@ -1,0 +1,9 @@
+{
+	"name": "Kartik-dataFactory01",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "75fddbbd-76e4-4528-82e8-45d4fa989d1e",
+		"tenantId": "de8aac5e-43df-41d5-a246-d8f9769e2465"
+	}
+}
