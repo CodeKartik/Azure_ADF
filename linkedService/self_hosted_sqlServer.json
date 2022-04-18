@@ -1,0 +1,17 @@
+{
+	"name": "self_hosted_sqlServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=KARTIKS-LAPTOP;initial catalog=NORTHWND",
+			"userName": "kartik",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhYTQ5MWVjMy03YzIwLTRkYjctODRhNS1iN2FkZWFjZjQ4OGUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
