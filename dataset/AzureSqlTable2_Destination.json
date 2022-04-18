@@ -1,16 +1,24 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "AzureSqlTable2_Destination",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1Destination",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "kartik"
+			"table": {
+				"value": "@dataset().tableName",
+				"type": "Expression"
+			}
 		}
 	}
 }

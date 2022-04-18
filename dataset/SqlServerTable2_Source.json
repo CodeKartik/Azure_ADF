@@ -1,0 +1,24 @@
+{
+	"name": "SqlServerTable2_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "self_hosted_sqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().tableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
