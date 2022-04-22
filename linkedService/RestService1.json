@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "https://jsonplaceholder.typicode.com/todos/1",
+			"url": "http://dummy.restapiexample.com/api/v1/employees",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
