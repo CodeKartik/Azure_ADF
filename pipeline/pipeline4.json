@@ -1,5 +1,5 @@
 {
-	"name": "Last_saturday",
+	"name": "pipeline4",
 	"properties": {
 		"activities": [
 			{
@@ -29,12 +29,17 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
-					"enableSkipIncompatibleRow": false,
 					"logSettings": {
 						"enableCopyActivityLog": true,
 						"copyActivityLogSettings": {
@@ -45,7 +50,8 @@
 							"linkedServiceName": {
 								"referenceName": "AzureBlobStorage1",
 								"type": "LinkedServiceReference"
-							}
+							},
+							"path": "new"
 						}
 					},
 					"translator": {
@@ -59,29 +65,16 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DestinationDataset_392",
+						"referenceName": "newDataset_src",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable2_Destination",
+						"referenceName": "newDataset_dest",
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Fail1",
-				"type": "Fail",
-				"dependsOn": [
-					{
-						"activity": "Copy data1",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
-				"userProperties": []
 			}
 		],
 		"annotations": []
