@@ -1,7 +1,0 @@
-{
-	"name": "AzureBlobStorage842",
-	"properties": {
-		"privateLinkResourceId": "/subscriptions/dde21718-8336-4460-99ca-90a095c550b2/resourceGroups/kartik-Resources/providers/Microsoft.Storage/storageAccounts/newstorage98567",
-		"groupId": "blob"
-	}
-}
